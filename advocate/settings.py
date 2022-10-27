@@ -14,6 +14,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
 
 sentry_sdk.init(
     dsn="https://87a0964455294298ab0114302165b85f@o4504053799124992.ingest.sentry.io/4504053800042496",
