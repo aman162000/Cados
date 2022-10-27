@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 import mimetypes
-mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("text/html", ".css", True)
 
 sentry_sdk.init(
     dsn="https://87a0964455294298ab0114302165b85f@o4504053799124992.ingest.sentry.io/4504053800042496",
@@ -181,5 +181,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 WHITENOISE_MIMETYPES = {
-    '.css': 'text/css'
+    '.css': 'text/html'
     }
