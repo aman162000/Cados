@@ -1,1 +1,1 @@
-web:python manage.py collectstatic && gunicorn advocate.wsgi
+web: gunicorn advocate.wsgi
