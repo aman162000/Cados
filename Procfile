@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn advocate.wsgi
+web: gunicorn advocate.wsgi
