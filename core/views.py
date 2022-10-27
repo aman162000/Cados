@@ -15,7 +15,7 @@ class AdvocateListAPIView(viewsets.ModelViewSet):
     http_method_names = ['get']
 
     def get_queryset(self):
-        queryset = Advocate.objects.all()
+        queryset = Advocate.objects.all().order_by('id')
         param = self.request.GET.get('query',None)
         if param is not None:
             queryset = Advocate.objects.filter(username__iexact=param) 
@@ -39,7 +39,7 @@ class CompanyListAPIView(viewsets.ModelViewSet):
     http_method_names = ['get']
 
     def get_queryset(self):
-        queryset = Company.objects.all()
+        queryset = Company.objects.all().order_by('id')
         param = self.request.GET.get('query',None)
 
         if param is not None:
